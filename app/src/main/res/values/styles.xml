@@ -57,6 +57,10 @@
     </style>
     
     <!-- Text styles -->
+    <style name="Text">
+        <!-- Base text style (empty) -->
+    </style>
+    
     <style name="Text.Title">
         <item name="android:textSize">24sp</item>
         <item name="android:textStyle">bold</item>
