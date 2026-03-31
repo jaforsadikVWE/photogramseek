@@ -24,11 +24,18 @@ jobs:
     - name: Setup Android SDK
       uses: android-actions/setup-android@v3
     
-    - name: Grant execute permission for gradlew
-      run: chmod +x ./gradlew
+    - name: Generate Gradle wrapper
+      run: |
+        gradle wrapper || echo "Gradle wrapper generation failed, using gradle directly"
     
     - name: Build with Gradle
-      run: ./gradlew assembleDebug
+      run: |
+        if [ -f "./gradlew" ]; then
+          chmod +x ./gradlew
+          ./gradlew assembleDebug
+        else
+          gradle assembleDebug
+        fi
     
     - name: Upload APK artifact
       uses: actions/upload-artifact@v4
@@ -38,10 +45,20 @@ jobs:
         retention-days: 7
     
     - name: Run tests
-      run: ./gradlew test
+      run: |
+        if [ -f "./gradlew" ]; then
+          ./gradlew test
+        else
+          gradle test
+        fi
     
     - name: Lint check
-      run: ./gradlew lintDebug
+      run: |
+        if [ -f "./gradlew" ]; then
+          ./gradlew lintDebug
+        else
+          gradle lintDebug
+        fi
   
   release:
     runs-on: ubuntu-latest
@@ -61,11 +78,14 @@ jobs:
     - name: Setup Android SDK
       uses: android-actions/setup-android@v3
     
-    - name: Grant execute permission for gradlew
-      run: chmod +x ./gradlew
-    
     - name: Build release APK
-      run: ./gradlew assembleRelease
+      run: |
+        if [ -f "./gradlew" ]; then
+          chmod +x ./gradlew
+          ./gradlew assembleRelease
+        else
+          gradle assembleRelease
+        fi
     
     - name: Sign APK (if keystore available)
       env:
@@ -77,13 +97,24 @@ jobs:
         if [ -n "$KEYSTORE_BASE64" ]; then
           echo "Signing APK with provided keystore"
           echo "$KEYSTORE_BASE64" | base64 --decode > keystore.jks
-          ./gradlew assembleRelease -Pandroid.injected.signing.store.file=keystore.jks \
-            -Pandroid.injected.signing.store.password="$KEYSTORE_PASSWORD" \
-            -Pandroid.injected.signing.key.alias="$KEY_ALIAS" \
-            -Pandroid.injected.signing.key.password="$KEY_PASSWORD"
+          if [ -f "./gradlew" ]; then
+            ./gradlew assembleRelease -Pandroid.injected.signing.store.file=keystore.jks \
+              -Pandroid.injected.signing.store.password="$KEYSTORE_PASSWORD" \
+              -Pandroid.injected.signing.key.alias="$KEY_ALIAS" \
+              -Pandroid.injected.signing.key.password="$KEY_PASSWORD"
+          else
+            gradle assembleRelease -Pandroid.injected.signing.store.file=keystore.jks \
+              -Pandroid.injected.signing.store.password="$KEYSTORE_PASSWORD" \
+              -Pandroid.injected.signing.key.alias="$KEY_ALIAS" \
+              -Pandroid.injected.signing.key.password="$KEY_PASSWORD"
+          fi
         else
           echo "No keystore provided, building unsigned release APK"
-          ./gradlew assembleRelease
+          if [ -f "./gradlew" ]; then
+            ./gradlew assembleRelease
+          else
+            gradle assembleRelease
+          fi
         fi
     
     - name: Upload release APK
