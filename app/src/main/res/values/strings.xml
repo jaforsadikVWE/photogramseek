@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Photogram Backup</string>
+    
+    <!-- Main Activity -->
+    <string name="backup_status">Backup Status</string>
+    <string name="uploaded">Uploaded</string>
+    <string name="remaining">Remaining</string>
+    <string name="folders_to_backup">Folders to Backup</string>
+    <string name="sync_now">Sync Now</string>
+    <string name="dashboard">Dashboard</string>
+    <string name="settings">Settings</string>
+    <string name="sync_started">Sync started in background</string>
+    <string name="permissions_required">Permissions are required for the app to function</string>
+    
+    <!-- Dashboard Activity -->
+    <string name="photo_statistics">Photo Statistics</string>
+    <string name="total_photos">Total Photos</string>
+    <string name="last_sync">Last Sync</string>
+    <string name="storage_used">Storage Used</string>
+    <string name="daily_usage">Daily Usage</string>
+    <string name="daily_limit">Daily Limit</string>
+    <string name="limit_used">%1$d%% of daily limit used</string>
+    <string name="system_status">System Status</string>
+    <string name="telegram_connection">Telegram Connection</string>
+    <string name="auto_sync">Auto Sync</string>
+    <string name="storage_warning">Storage Warning</string>
+    <string name="active">Active</string>
+    <string name="enabled">Enabled</string>
+    <string name="gb_used">%1$.1f GB used</string>
+    
+    <!-- Settings Activity -->
+    <string name="telegram_configuration">Telegram Configuration</string>
+    <string name="bot_token">Bot Token</string>
+    <string name="enter_bot_token">Enter your Telegram Bot Token</string>
+    <string name="chat_id">Chat ID</string>
+    <string name="example_chat_id">e.g., -100123456789</string>
+    <string name="test_connection">Test Connection</string>
+    <string name="sync_settings">Sync Settings</string>
+    <string name="wifi_only">Wi-Fi Only</string>
+    <string name="notifications">Notifications</string>
+    <string name="daily_upload_limit">Daily Upload Limit</string>
+    <string name="max_photos_per_day">Maximum number of photos to upload per day</string>
+    <string name="about_photogram">About Photogram</string>
+    <string name="version">Version %1$s</string>
+    <string name="build">Build %1$s</string>
+    <string name="app_description">Photogram transforms Telegram into your unlimited, organized cloud storage for photos. Each folder on your phone becomes a separate Topic in your private Telegram Group.</string>
+    <string name="save_settings">Save Settings</string>
+    <string name="settings_saved">Settings saved successfully</string>
+    <string name="bot_token_required">Bot Token and Chat ID are required</string>
+    <string name="testing_connection">Testing connection to Telegram…</string>
+    <string name="connection_successful">Connection successful! Bot is ready.</string>
+    <string name="enter_bot_token_first">Please enter Bot Token and Chat ID first</string>
+    
+    <!-- Common -->
+    <string name="ok">OK</string>
+    <string name="cancel">Cancel</string>
+    <string name="save">Save</string>
+    <string name="loading">Loading…</string>
+    <string name="error">Error</string>
+    <string name="success">Success</string>
+    <string name="warning">Warning</string>
+    
+    <!-- Backup Service -->
+    <string name="backup_service_running">Backup service running</string>
+    <string name="syncing_photos">Syncing photos to Telegram…</string>
+    <string name="sync_completed">Sync completed</string>
+    
+    <!-- Permissions -->
+    <string name="permission_media_images">Access photos and media</string>
+    <string name="permission_notifications">Show notifications</string>
+    <string name="permission_storage">Access storage</string>
+</resources>
