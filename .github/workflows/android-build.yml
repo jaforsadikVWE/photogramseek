@@ -26,7 +26,7 @@ jobs:
     
     - name: Generate Gradle wrapper
       run: |
-        gradle wrapper || echo "Gradle wrapper generation failed, using gradle directly"
+        gradle wrapper --gradle-version 8.2 || echo "Gradle wrapper generation failed, using gradle directly"
     
     - name: Build with Gradle
       run: |
