@@ -53,6 +53,7 @@
     <!-- Gradient Backgrounds -->
     <color name="background_gradient_start">#6366F1</color>
     <color name="background_gradient_end">#EC4899</color>
+    <color name="background_gradient">#F9FAFB</color>
     
     <!-- Divider -->
     <color name="divider">#1A000000</color>
