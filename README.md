@@ -1,12 +1,12 @@
-# ☁️ Photogram Backup
+# ☁️ GuardX
 
 Transform Telegram into your unlimited, organized cloud storage for photos.
 
-## 🌟 What is Photogram?
-Photogram is a modern Android app that automatically backs up your photos to Telegram. Each folder on your phone becomes a separate Topic in your private Telegram Group, keeping everything perfectly organized.
+## 🌟 What is GuardX?
+GuardX is a modern Android app that automatically backs up your photos to Telegram. Each folder on your phone becomes a separate Topic in your private Telegram Group, keeping everything perfectly organized.
 
 ## 💡 Unlimited Storage
-Telegram offers free, unlimited cloud storage. Photogram leverages this to give you worry-free photo backups.
+Telegram offers free, unlimited cloud storage. GuardX leverages this to give you worry-free photo backups.
 
 ## ✨ Features
 | Feature | Description |
@@ -46,8 +46,8 @@ Telegram offers free, unlimited cloud storage. Photogram leverages this to give 
 
 ### Build Steps
 ```bash
-git clone https://github.com/yourusername/photogram-backup.git
-cd photogram-backup
+git clone https://github.com/yourusername/guardx.git
+cd guardx
 ./gradlew assembleDebug
 ```
 
@@ -115,4 +115,4 @@ MIT License - see LICENSE file for details
 5. Open a Pull Request
 
 ## 📞 Support
-For issues and feature requests, please use the [GitHub Issues](https://github.com/yourusername/photogram-backup/issues) page.
+For issues and feature requests, please use the [GitHub Issues](https://github.com/yourusername/guardx/issues) page.

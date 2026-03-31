@@ -13,5 +13,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "PhotogramBackup"
+rootProject.name = "GuardX"
 include ':app'

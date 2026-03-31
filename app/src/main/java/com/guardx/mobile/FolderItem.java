@@ -1,4 +1,4 @@
-package com.photogram.backup;
+package com.guardx.mobile;
 
 public class FolderItem {
     private String name;

@@ -1,4 +1,4 @@
-package com.photogram.backup;
+package com.guardx.mobile;
 
 import android.app.Notification;
 import android.app.NotificationChannel;
@@ -21,9 +21,9 @@ import java.util.concurrent.TimeUnit;
 public class BackupService extends Service {
     
     private static final String TAG = "BackupService";
-    private static final String CHANNEL_ID = "photogram_backup_channel";
+    private static final String CHANNEL_ID = "guardx_backup_channel";
     private static final int NOTIFICATION_ID = 1001;
-    private static final String WORK_TAG = "photogram_backup_work";
+    private static final String WORK_TAG = "guardx_backup_work";
     
     @Override
     public void onCreate() {
@@ -55,7 +55,7 @@ public class BackupService extends Service {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             NotificationChannel channel = new NotificationChannel(
                     CHANNEL_ID,
-                    "Photogram Backup",
+                    "GuardX",
                     NotificationManager.IMPORTANCE_LOW
             );
             channel.setDescription("Background photo backup service");
@@ -66,7 +66,7 @@ public class BackupService extends Service {
     
     private Notification createNotification(String content) {
         return new NotificationCompat.Builder(this, CHANNEL_ID)
-                .setContentTitle("Photogram Backup")
+                .setContentTitle("GuardX")
                 .setContentText(content)
                 .setSmallIcon(R.drawable.ic_cloud_upload)
                 .setPriority(NotificationCompat.PRIORITY_LOW)
@@ -114,7 +114,7 @@ public class BackupService extends Service {
     }
     
     private void scheduleAutoSync() {
-        SharedPreferences prefs = getSharedPreferences("PhotogramPrefs", MODE_PRIVATE);
+        SharedPreferences prefs = getSharedPreferences("GuardXPrefs", MODE_PRIVATE);
         boolean autoSync = prefs.getBoolean("auto_sync", true);
         
         if (!autoSync) {

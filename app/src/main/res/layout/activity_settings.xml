@@ -247,7 +247,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="ℹ️ About Photogram"
+                    android:text="ℹ️ About GuardX"
                     android:textSize="20sp"
                     android:textStyle="bold"
                     android:textColor="@color/text_primary"
@@ -272,7 +272,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Photogram transforms Telegram into your unlimited, organized cloud storage for photos. Each folder on your phone becomes a separate Topic in your private Telegram Group."
+                    android:text="GuardX transforms Telegram into your unlimited, organized cloud storage for photos. Each folder on your phone becomes a separate Topic in your private Telegram Group."
                     android:textSize="14sp"
                     android:textColor="@color/text_secondary"
                     android:lineSpacingExtra="4dp" />

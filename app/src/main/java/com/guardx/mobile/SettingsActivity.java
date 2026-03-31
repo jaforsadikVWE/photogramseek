@@ -1,4 +1,4 @@
-package com.photogram.backup;
+package com.guardx.mobile;
 
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -15,7 +15,7 @@ public class SettingsActivity extends AppCompatActivity {
     private Button btnSave, btnTestConnection;
     
     private SharedPreferences prefs;
-    private static final String PREFS_NAME = "PhotogramPrefs";
+    private static final String PREFS_NAME = "GuardXPrefs";
     
     @Override
     protected void onCreate(Bundle savedInstanceState) {

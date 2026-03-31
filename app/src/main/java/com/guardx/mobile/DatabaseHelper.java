@@ -1,4 +1,4 @@
-package com.photogram.backup;
+package com.guardx.mobile;
 
 import android.content.ContentValues;
 import android.content.Context;
@@ -15,7 +15,7 @@ import java.util.Locale;
 public class DatabaseHelper extends SQLiteOpenHelper {
     
     private static final String TAG = "DatabaseHelper";
-    private static final String DATABASE_NAME = "photogram.db";
+    private static final String DATABASE_NAME = "guardx.db";
     private static final int DATABASE_VERSION = 1;
     
     // Table names

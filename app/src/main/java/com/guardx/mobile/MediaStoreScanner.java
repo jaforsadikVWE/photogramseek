@@ -1,4 +1,4 @@
-package com.photogram.backup;
+package com.guardx.mobile;
 
 import android.content.ContentResolver;
 import android.content.Context;

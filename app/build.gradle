@@ -3,11 +3,11 @@ plugins {
 }
 
 android {
-    namespace 'com.photogram.backup'
+    namespace 'com.guardx.mobile'
     compileSdk 34
 
     defaultConfig {
-        applicationId "com.photogram.backup"
+        applicationId "com.guardx.mobile"
         minSdk 24
         targetSdk 34
         versionCode 1

@@ -1,4 +1,4 @@
-package com.photogram.backup;
+package com.guardx.mobile;
 
 import android.content.Context;
 import android.content.SharedPreferences;
@@ -27,7 +27,7 @@ public class TelegramHelper {
                 .writeTimeout(30, TimeUnit.SECONDS)
                 .build();
         
-        SharedPreferences prefs = context.getSharedPreferences("PhotogramPrefs", Context.MODE_PRIVATE);
+        SharedPreferences prefs = context.getSharedPreferences("GuardXPrefs", Context.MODE_PRIVATE);
         this.botToken = prefs.getString("bot_token", "");
         this.chatId = prefs.getString("chat_id", "");
     }

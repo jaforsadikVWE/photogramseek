@@ -1,4 +1,4 @@
-package com.photogram.backup;
+package com.guardx.mobile;
 
 import android.content.Context;
 import android.content.SharedPreferences;
@@ -45,7 +45,7 @@ public class BackupWorker extends Worker {
             }
             
             // Check network constraints
-            SharedPreferences prefs = context.getSharedPreferences("PhotogramPrefs", Context.MODE_PRIVATE);
+            SharedPreferences prefs = context.getSharedPreferences("GuardXPrefs", Context.MODE_PRIVATE);
             boolean wifiOnly = prefs.getBoolean("wifi_only", true);
             
             // In real app, check network type here
@@ -69,7 +69,7 @@ public class BackupWorker extends Worker {
     }
     
     private boolean isDailyLimitExceeded() {
-        SharedPreferences prefs = context.getSharedPreferences("PhotogramPrefs", Context.MODE_PRIVATE);
+        SharedPreferences prefs = context.getSharedPreferences("GuardXPrefs", Context.MODE_PRIVATE);
         int dailyLimit = prefs.getInt("daily_limit", 500);
         
         // Get today's upload count from database
@@ -144,7 +144,7 @@ public class BackupWorker extends Worker {
     }
     
     private void incrementDailyUploadCount() {
-        SharedPreferences prefs = context.getSharedPreferences("PhotogramPrefs", Context.MODE_PRIVATE);
+        SharedPreferences prefs = context.getSharedPreferences("GuardXPrefs", Context.MODE_PRIVATE);
         String today = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault()).format(new Date());
         String key = "daily_count_" + today;
         
@@ -153,7 +153,7 @@ public class BackupWorker extends Worker {
     }
     
     private void updateLastSyncTime() {
-        SharedPreferences prefs = context.getSharedPreferences("PhotogramPrefs", Context.MODE_PRIVATE);
+        SharedPreferences prefs = context.getSharedPreferences("GuardXPrefs", Context.MODE_PRIVATE);
         long currentTime = System.currentTimeMillis();
         prefs.edit().putLong("last_sync_time", currentTime).apply();
     }
